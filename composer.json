@@ -1,0 +1,21 @@
+{
+    "name": "franjimenez/composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "franjimenez",
+            "email": "fjimenezjob@gmail.com"
+        }
+    ],
+    "autoload": {
+        
+        "psr-4": {
+            "models\\":"models/"
+        }
+    },
+
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
