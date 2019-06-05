@@ -34,7 +34,9 @@ class Registro{
 
                 if($email == $valor){
 
-                    echo 'Este email ya esta registrado';
+                    echo 'Este email ya esta registrado, por favor inicie sesión:<br>';
+
+                    echo '<a class="boton" href="index.php">INICIAR SESION</a>';
 
                     $encontrado =1;
 
@@ -43,14 +45,12 @@ class Registro{
             }
 
             if($encontrado == 0){
-
-                var_dump ($array);
     
                 fwrite ($registro,$email.PHP_EOL);
 
-                echo 'OK';
-
                 fclose($registro);
+
+                header('location: factura.php');
             }
 
         }

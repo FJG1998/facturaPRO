@@ -34,11 +34,15 @@
 
 <?php
 
+if(isset($_POST['emailRegistro'])){
+
 $email = $_POST['emailRegistro'];
 
 $registro = new models\Registro();
 
 $registro->registrar($email);
+
+}
 
 ?>
     
