@@ -1,8 +1,4 @@
-<?php require_once 'vendor/autoload.php';
-
-
-
-?>
+<?php require_once 'vendor/autoload.php'; ?>
 
 <!DOCTYPE html>
 
@@ -25,7 +21,7 @@
     
             <span>Email:</span><br>
             
-            <input type="text" name="emailLogin" id="">
+            <input type="email" name="emailLogin" id="">
     
             </form>
     

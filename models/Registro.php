@@ -50,7 +50,7 @@ class Registro{
 
                 fclose($registro);
 
-                header('location: factura.php');
+                header('location: formulario.php');
             }
 
         }
@@ -61,4 +61,3 @@ class Registro{
 
 }
 
-// $registro = new models\Registro();
