@@ -16,9 +16,9 @@ class Login{
 
                 if($email == $valor){
 
-                    header('location: formulario.php');
+                    fclose($registro);
 
-                    fclose('assets/txt/registro.txt');
+                    header('location: formulario.php');
 
                 }else{ $noregistrado +1;}
                 
@@ -30,7 +30,7 @@ class Login{
 
             echo '<a class="boton" href="registrarse.php">REGISTRARME</a>';
 
-            fclose('assets/txt/registro.txt');
+            fclose($registro);
         }
 
         

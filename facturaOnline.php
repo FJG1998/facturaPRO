@@ -1,7 +1,15 @@
-<?php require_once 'vendor/autoload.php'; ?>
+<?php 
+
+require_once 'vendor/autoload.php'; 
+
+$objFactura = new models\FormFactura();
+
+
+?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,38 +22,40 @@
 </head>
 <body>
 
+<div class="contenedor_empresa"> 
 
+    <section class="empresa"> 
+
+        <ul>
 
 <?php
 
+    echo('<li>Nº' .' '.$_POST['num'] . '</li>');
 
-echo ' <div class="contenedor_empresa"> ';
+    echo('<li>Empresa' .' '.$_POST['nempresa'].'</li>' );
 
-    echo ' <section class="empresa"> ';
+    echo('<li>C.I.F.' .' '. $_POST['cif'] .'</li>');
 
-        echo'<ul>';
+    echo( '<li>Cliente' .' '. $_POST['cliente2'] .'</li>');
 
-            echo('<li>Nº' .' '.$_POST['num'] . '</li>');
+    echo('<li>Dirección'.' '. $_POST['direction']. '</li>');
 
-            echo('<li>Empresa' .' '.$_POST['nempresa'].'</li>' );
+    echo('<li>C.I.F.'.' '. $_POST['cif2']. '</li>');
+    
+    ?>
+        </ul>
 
-            echo('<li>C.I.F.' .' '. $_POST['cif'] .'</li>');
+    </section>
 
-            echo( '<li>Cliente' .' '. $_POST['cliente2'] .'</li>');
+</div>
 
-            echo('<li>Dirección'.' '. $_POST['direction']. '</li>');
-
-            echo('<li>C.I.F.'.' '. $_POST['cif2']. '</li>');
-
-        echo'</ul>';
-
-    echo'</section>';
-
-echo'</div>';
+<?php
 
 $pepe = new  models\FormFactura();
 
 $pepe->printProductos();
+
+$pepe->subtotal();
 
 ?>
     
